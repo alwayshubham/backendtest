@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Nudge</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .container {
+      width: 400px;
+      background: #fff;
+      padding: 20px;
+      margin: 30px auto;
+      border: 1px solid #ddd;
+    }
+    input, textarea, select {
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 8px;
+    }
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h3>Create a Nudge</h3>
+
+    <!-- Target -->
+    <select>
+      <option value="event">Event</option>
+      <option value="article">Article</option>
+    </select>
+
+    <!-- Tag -->
+    <input type="text" placeholder="Tag event or article" />
+
+    <!-- Title -->
+    <input type="text" maxlength="60" placeholder="Title (60 char max)" />
+
+    <!-- Image -->
+    <label>Choose Image</label>
+    <input type="file" />
+
+    <!-- Schedule -->
+    <div class="row">
+      <input type="date" />
+      <input type="time" />
+    </div>
+
+    <!-- Description -->
+    <textarea placeholder="Description of the nudge"></textarea>
+
+    <!-- Icon -->
+    <label>Choose Icon</label>
+    <input type="file" />
+
+    <!-- One line invite -->
+    <input
+      type="text"
+      placeholder="One-line invitation (shown when minimized)"
+    />
+
+    <!-- Actions -->
+    <div class="actions">
+      <button>Preview</button>
+      <button>Publish Now</button>
+    </div>
+  </div>
+
+</body>
+</html>
